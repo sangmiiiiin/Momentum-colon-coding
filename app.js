@@ -6,10 +6,41 @@
 //         Text.innerText = "Grab me!";
 //     }
 // }
+// const title = document.querySelector(".Momentum h1");
+
+// console.dir(title);
+
+// function handleTitleClick() {
+//     title.style.color = "red";
+// }
+
+// title.addEventListener("click", handleTitleClick);
+
 const title = document.querySelector(".Momentum h1");
 
-function handleTitleClick() {
+const handleMouseEnter = () => {
+    title.innerText = "Mouse is here!";
+}
+const handleClickEvent = () => {
     title.style.color = "red";
 }
 
-title.addEventListener("click", handleTitleClick);
+const handleOnMouse = () => {
+    title.innerText = "Mouse is gon!";
+}
+
+const handleWindowResize = () => {
+    document.body.style.backgroundColor = "tomato";
+}
+
+const handleWindowCopy = () => {
+    alert("Don't copy this");
+}
+
+title.addEventListener("mouseenter", handleMouseEnter);
+// title.addEventListener("click", handleClickEvent);
+title.addEventListener("mouseleave", handleOnMouse);
+title.onclick = handleClickEvent;
+
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
