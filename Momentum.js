@@ -10,7 +10,8 @@ function onLoginSubmit(e) {
     const username = loginInput.value;
     loginForm.classList.add(HIDDEN_CLASSNAME);
     console.log(username);
-    greeting.innerText = "Hello " + username;
+    greeting.innerText = `Hello ${username}`;
+    //greeting.innerText = "Hello " + username; 과 동일하다 템플릿 리터럴을 사용해 변수를 문자열처럼 사용가능
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
