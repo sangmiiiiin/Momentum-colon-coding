@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.headerContainer{
+    border: 1px solid black;
+    height: 5vh;
+    line-height: 1.8vh;
+    text-align: center;
+}
+.mainContainer{
+    border: 0px solid red;
+    height: 80vh;
+
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+}
+.sectionContainer{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.asideContainer{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footerContainer{
+    text-align: center;
+    line-height: 15vh;
+    border: 1px solid black;
+}
+aside button {
+    margin-top: 10vh;
+    width: 10vw;
+    height: 5vh;
+}
+
+.changedBackgroundColor {
+    background-color: tomato;
+}
+.naverLink{
+    color: black;
+    text-decoration: none;
+}
+
+.dayOrNightBackgroud {
+    background-color: black;
+}
+
+.nightText {
+    color: white;
+}
+.nightBorder {
+    border-color: white;
+}
