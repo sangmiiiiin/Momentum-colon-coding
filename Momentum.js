@@ -6,26 +6,24 @@ const USERNAME_KEY = "username";
 
 function onLoginSubmit(e) {
     e.preventDefault();
-    const username = loginInput.value;
     loginForm.classList.add(HIDDEN_CLASSNAME);
-    localStorage.setItem(USERNAME_KEY, username);
-    paintGreetings(username);
+    localStorage.setItem(USERNAME_KEY, loginInput.value);
+    paintGreetings();
 }
 
-function paintGreetings(username) {
+function paintGreetings() {
+    const username = localStorage.getItem(USERNAME_KEY);
     greeting.classList.remove(HIDDEN_CLASSNAME);
     greeting.innerText = `Hello ${username}`;
-}
+}ㅏ
 
 const savedUserName = localStorage.getItem(USERNAME_KEY);
-
-console.log(savedUserName);
 
 if(savedUserName === null) {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginForm.addEventListener("submit", onLoginSubmit);
 } else {
     loginForm.classList.add(HIDDEN_CLASSNAME);
-    paintGreetings(savedUserName);
+    paintGreetings();
 }
 
