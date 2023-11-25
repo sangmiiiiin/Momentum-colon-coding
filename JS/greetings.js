@@ -1,29 +1,32 @@
 const loginForm = document.querySelector("#login-form");
-const loginInput = document.querySelector("#login-form input");
+const inputForm = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
-const HIDDEN_CLASSNAME = "hidden";  // 관습 비교적 중요하지 않은 단순 문자열 같은경우 대문자를 사용하고 스네이크 방식으로 작성
-const USERNAME_KEY = "username";
 
-function onLoginSubmit(e) {
-    e.preventDefault();
-    loginForm.classList.add(HIDDEN_CLASSNAME);
-    localStorage.setItem(USERNAME_KEY, loginInput.value);
-    paintGreetings();
+const HIDDEN_ITEM = "hidden"
+const SUBMIT_STRING = "submit"
+const USERNAME_STRING = "username"
+
+const handleLogin = (e) => {
+    e.preventDefault()
+    const username = inputForm.value;
+    localStorage.setItem(USERNAME_STRING, username);
+    showGreeting(username);
 }
 
-function paintGreetings() {
-    const username = localStorage.getItem(USERNAME_KEY);
-    greeting.classList.remove(HIDDEN_CLASSNAME);
-    greeting.innerText = `Hello ${username}`;
+
+
+const showGreeting = (username) => {
+    loginForm.classList.add(HIDDEN_ITEM);
+    greeting.classList.remove(HIDDEN_ITEM);
+    greeting.innerText = `Hello ! ${username}`
 }
 
-const savedUserName = localStorage.getItem(USERNAME_KEY);
 
-if(savedUserName === null) {
-    loginForm.classList.remove(HIDDEN_CLASSNAME);
-    loginForm.addEventListener("submit", onLoginSubmit);
+const savedName = localStorage.getItem(USERNAME_STRING);
+
+if(savedName === null) {
+    loginForm.classList.remove(HIDDEN_ITEM);
+    loginForm.addEventListener(SUBMIT_STRING, handleLogin);
 } else {
-    loginForm.classList.add(HIDDEN_CLASSNAME);
-    paintGreetings();
+    showGreeting(savedName);
 }
-
