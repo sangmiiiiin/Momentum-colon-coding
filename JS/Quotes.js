@@ -28,7 +28,7 @@ const Quotes = [
 const showQuote = document.querySelector("#quotes span:first-child");
 const showAuthor = document.querySelector("#quotes span:last-child");
 
-const todaysQuote = Quotes[Math.round(Math.random() * Quotes.length)];
+const todaysQuote = Quotes[Math.floor(Math.random() * Quotes.length)];
 
 showQuote.innerText = todaysQuote.quote;
 showAuthor.innerText = todaysQuote.author;
