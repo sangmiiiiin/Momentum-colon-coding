@@ -13,8 +13,8 @@ function saveTodos () {
 function deleteToDo(e) {
     const li = e.target.parentElement;
     li.remove();
-    
-
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveTodos()
 }
 function paintToDo (newToDo) {
     const li = document.createElement("li");
@@ -50,7 +50,7 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if (savedToDos !== null) {
     const parseToDos = JSON.parse(savedToDos);
-    console.log(typeof parseToDos);
     toDos = parseToDos;
     parseToDos.forEach(paintToDo);
 }
+
