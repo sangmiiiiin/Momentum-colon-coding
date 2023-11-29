@@ -30,15 +30,22 @@
     height: 5vh;
     background-color: rgb(251, 251, 251);
     opacity: 0.5;
+    text-align: center;
+}
+
+input::placeholder{
+    text-align: center;
+    margin-right: 1vw;
 }
 
 #todo-list li{
-    list-style: none;
+    list-style-type: none;
     text-align: center;
 }
 #todo-list li span{
     color: white;
     text-align: center;
+    font-size: 1.8rem;
 }
 
 #todo-list button {
