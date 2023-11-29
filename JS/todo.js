@@ -19,6 +19,7 @@ function deleteToDo(e) {
 function paintToDo (newToDo) {
     const li = document.createElement("li");
     li.id = newToDo.id;
+    li.class = "dropdown-item";
     const span = document.createElement("span");
     span.innerText = newToDo.text;
     const button = document.createElement("button");

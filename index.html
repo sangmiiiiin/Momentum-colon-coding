@@ -5,29 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momentum App</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="weather">
         <span></span>
         <span></span>
     </div>
+    <h2 id="clock">00:00</h2>
     <form id="login-form" class="hidden">
-        <input 
+        <input
+            class="id" 
             required
             maxlength="10" 
             type="text" 
             placeholder="What is your name?" />
-        <input type="submit" value="Log In" />
+        <input 
+            class="login-button"
+            type="submit" 
+            value="Log In" />
     </form>
-    <h2 id="clock">00:00</h2>
     <h1 id="greeting" class="hidden"></h1>
     <form id="todo-form">
         <input type="text" placeholder="할일을 쓰고 엔터를 누르세요 !" required/>
     </form>
-    <ul id="todo-list"></ul>
     <div id="quotes">
         <span></span><br/>
         <span></span>
+    </div>
+    <div class="dropdown dropup">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+        </button>
+        <ul id="todo-list" class="dropdown-menu"></ul>
     </div>
     <script src="JS/greetings.js"></script>
     <script src="JS/clock.js"></script>
