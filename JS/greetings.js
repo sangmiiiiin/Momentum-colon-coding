@@ -18,7 +18,7 @@ const handleLogin = (e) => {
 const showGreeting = (username) => {
     loginForm.classList.add(HIDDEN_ITEM);
     greeting.classList.remove(HIDDEN_ITEM);
-    greeting.innerText = `Hello ! ${username}`
+    greeting.innerText = `Have a good day ! ${username}`
 }
 
 

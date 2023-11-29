@@ -1,3 +1,55 @@
 .hidden{
     display: none;
 }
+
+#clock {
+    color: white;
+    text-align: center;
+    font-size: 8.5rem;
+}
+
+#greeting {
+    text-align: center;
+    color: white;
+    margin-top: -10vh;
+}
+
+#quotes {
+    text-align: center;
+    color: white;
+    margin-top: 8vh;
+}
+
+#todo-form {
+    text-align: center;
+}
+
+#todo-form input {
+    border-radius: 8px;
+    width: 30vw;
+    height: 5vh;
+    background-color: rgb(251, 251, 251);
+    opacity: 0.5;
+}
+
+#todo-list li{
+    list-style: none;
+    text-align: center;
+}
+#todo-list li span{
+    color: white;
+    text-align: center;
+}
+
+#todo-list button {
+    background: none;
+    border: none;
+}
+
+#weather {
+    display: flex;
+    justify-content: end;
+}
+#weather span{
+    color: white;
+}
