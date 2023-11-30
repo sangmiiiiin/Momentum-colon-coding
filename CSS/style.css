@@ -96,6 +96,43 @@ input::placeholder{
     display: flex;
     justify-content: end;
 }
+
 #weather span{
     color: white;
+}
+@media screen and (max-width: 1500px) {
+    body{
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #todo-form input {
+        margin-top: 5vh;
+        border-radius: 8px;
+        width: 80vw;
+        height: 5vh;
+        background-color: rgb(251, 251, 251);
+        opacity: 0.5;
+        text-align: center;
+    }
+
+    #quotes {
+        text-align: center;
+        color: white;
+        position: fixed;
+    
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #todo-form input {
+        margin-top: 5vh;
+        border-radius: 8px;
+        width: 50vw;
+        height: 5vh;
+        background-color: rgb(251, 251, 251);
+        opacity: 0.5;
+        text-align: center;
+    }
 }
