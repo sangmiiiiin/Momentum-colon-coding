@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
-
+body {
+    margin: 0;
+    padding: 0;
+}
 .hidden{
     display: none;
 }
@@ -9,11 +12,13 @@
     text-align: center;
     font-size: 8.5rem;
     font-family: 'Nanum Pen Script', cursive;
+    margin-top: 20vh;
 }
 
 #login-form {
     text-align: center;
-    margin-top: -10vh;
+    margin-top: 3vh;
+    border: 0px solid red;
 }
 
 #login-form .id{
@@ -41,14 +46,20 @@
 #quotes {
     text-align: center;
     color: white;
-    margin-top: 8vh;
+    position: fixed;
+    bottom: 5%;
+    transform: translateX(-50%);
+    left: 50%;
+
 }
 
 #todo-form {
     text-align: center;
+    margin-bottom: 3vh;
 }
 
 #todo-form input {
+    margin-top: 5vh;
     border-radius: 8px;
     width: 30vw;
     height: 5vh;
@@ -61,7 +72,10 @@ input::placeholder{
     text-align: center;
     margin-right: 1vw;
 }
-
+#todo-list ul{
+    opacity: 0.5;
+    
+}
 #todo-list li{
     list-style-type: none;
     text-align: center;
@@ -69,12 +83,13 @@ input::placeholder{
 #todo-list li span{
     color: white;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1rem;
 }
 
 #todo-list button {
     background: none;
-    border: none;
+    border: 0px solid lightgray;
+    margin-left: 1vw;
 }
 
 #weather {
@@ -83,10 +98,4 @@ input::placeholder{
 }
 #weather span{
     color: white;
-}
-
-.dropdown {
-    text-align: end;
-    margin-top: 45vh;
-    border: 1px solid red;
 }

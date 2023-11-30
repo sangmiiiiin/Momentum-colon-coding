@@ -3,6 +3,7 @@ const toDoList = document.querySelector("#todo-list");
 const toDoFormInput = toDoForm.querySelector("input");
 
 const TODOS_KEY = "todos";
+const LIST_NUM = 0;
 
 let toDos = [];
 
@@ -19,7 +20,6 @@ function deleteToDo(e) {
 function paintToDo (newToDo) {
     const li = document.createElement("li");
     li.id = newToDo.id;
-    li.class = "dropdown-item";
     const span = document.createElement("span");
     span.innerText = newToDo.text;
     const button = document.createElement("button");
@@ -28,7 +28,7 @@ function paintToDo (newToDo) {
     li.appendChild(span);
     li.appendChild(button);
     toDoList.appendChild(li);
-}
+    }
 
 
 function handleTodoSubmit (e) {
