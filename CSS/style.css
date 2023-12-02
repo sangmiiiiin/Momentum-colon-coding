@@ -106,7 +106,22 @@ input::placeholder{
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 567px) {
+
+    #login-form .id{
+        margin-top: 2vh;
+        border-radius: 8px;
+        width: 65vw;
+        height: 5vh;
+        background-color: rgb(251, 251, 251);
+        opacity: 0.5;
+        text-align: center; 
+    }
+
+    #login-form .login-button{
+        width: 20vw;
+    }
+
     #todo-form input {
         margin-top: 5vh;
         border-radius: 8px;
@@ -126,6 +141,9 @@ input::placeholder{
 }
 
 @media screen and (max-width: 768px) {
+    #clock{
+
+    }
     #todo-form input {
         margin-top: 5vh;
         border-radius: 8px;
